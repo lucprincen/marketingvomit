@@ -23,9 +23,11 @@
             }
         },
         async fetch ({ store, params }) {
-            let { data } = await axios.get( 'https://staging.lucp.nl/marketingvomit/wp-json/wp/v2/posts?per_page=100&order=asc' );
-            store.commit( 'savePosts', data );
-            store.commit( 'setCurrent', 999 ); 
+            if( store.state.posts.length == 0 ){
+                let { data } = await axios.get( 'https://staging.lucp.nl/marketingvomit/wp-json/wp/v2/posts?per_page=100&order=asc' );
+                store.commit( 'savePosts', data );
+                store.commit( 'setCurrent', 999 ); 
+            }
         }
     }
 </script>
