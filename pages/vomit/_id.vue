@@ -1,4 +1,5 @@
 <template>
+
     <CurrentPost/>
 </template>
 
@@ -8,13 +9,23 @@
     import axios from 'axios';
 
     export default {
-        name: 'App',
+        name: 'Vomit',
         components: { CurrentPost },
+        created () {
+            setTimeout( () => {
+                this.setCurrent()
+            }, 100 );
+            
+        },
+        methods: {
+            setCurrent(){
+                this.$store.commit( 'setCurrent', this.$route.params.id );
+            }
+        },
         async fetch ({ store, params }) {
             let { data } = await axios.get( 'https://staging.lucp.nl/marketingvomit/wp-json/wp/v2/posts?per_page=100&order=asc' );
             store.commit( 'savePosts', data );
-            console.error( data.length );
-            store.commit( 'setCurrent', ( data.length - 1 ) );
+            store.commit( 'setCurrent', 999 ); 
         }
     }
 </script>

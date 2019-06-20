@@ -8,9 +8,10 @@ const createStore = () => {
         },
         getters: {
             getCurrentPost: ( state ) => {
-                console.log( state.current );
-                console.log( state.posts[ state.current ] );
                 return state.posts[ state.current ];
+            },
+            getMax: ( state ) => {
+                return state.posts.length - 1;
             }
         },
         mutations: {

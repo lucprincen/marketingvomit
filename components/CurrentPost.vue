@@ -1,45 +1,27 @@
 <template>
     <article class="current-post">
-        <div class="title"><i>&ldquo;</i><h2 v-html="title"></h2><i>&rdquo;</i></div>
+        <h2 class="title" v-html="title"></h2>
         <span class="emoji">🤢</span>
+        <Controls/>
     </article>
 </template>
 
 <script>
+
+    import Controls from './Controls.vue';
+
     export default {
         name: 'CurrentPost',
+        components: { Controls },
         computed: {
             title(){
                 let _post = this.$store.getters.getCurrentPost;
-                return _post.title.rendered;
+                if( typeof( _post ) !== 'undefined' ){
+                    return '<i>&ldquo;</i>' + _post.title.rendered + '<i>&rdquo;</i>';
+                }else{
+                    return '';
+                }
             }
         }
     }
 </script>
-<style>
-    .current-post{
-        text-align: center;
-        max-width: 80%;
-        margin: auto;
-    }
-
-    .current-post h2{
-        font-weight: 400;
-        font-size: 4.5rem;
-    }
-
-    .current-post .title{
-        display: block;
-        text-align: center;
-    }
-
-    .current-post .title i,
-    .current-post .title h2{
-        display: inline-block;
-    }
-
-    .current-post .emoji{
-        font-size: 4rem;
-        margin-top: 50px;
-    }
-</style>

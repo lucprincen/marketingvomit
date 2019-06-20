@@ -1,0 +1,54 @@
+.current-post{
+    text-align: center;
+    max-width: 80%;
+    margin: auto;
+
+    .title{
+        display: block;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-align: center;
+
+        @media only screen and (min-width: 600px ){
+             font-size: 4.5rem;
+        }
+    }
+
+    .emoji{
+        font-size: 4rem;
+        margin-top: 50px;
+    }
+}
+
+.prev-next{
+    margin: 50px auto;
+
+    .button{
+        padding: 8px 16px;
+        border-radius: 4px;
+        background: $brown;
+        color: $orange;
+        text-decoration: none;
+        line-height: 1.2rem;
+        display: inline-block;
+        margin: 0 0 $gap 0;
+
+            
+        svg{
+            max-height: 1rem;
+            max-width: 1rem;
+            margin: 0 0 -2px 0;
+        }
+
+        &:hover, &:focus{
+            background: $orange;
+            color: $brown;
+        }
+
+        @media only screen and (min-width: 500px ){               
+            &:first-of-type{
+                margin-right: $gap;
+            }
+        }
+    }
+}
