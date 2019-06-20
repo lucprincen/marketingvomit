@@ -11,8 +11,8 @@ export default {
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { hid: 'description', name: 'description', content: 'Your daily dose of nauseating bullshit' },
         { property: 'og:title', name: 'og:title', content: 'Marketing Vomit' },
-        { property: 'og:description', name: 'og:description', content: 'Your daily dose of nauseating bullshit' }
-
+        { property: 'og:description', name: 'og:description', content: 'Your daily dose of nauseating bullshit' },
+        { property: 'og:image', name: 'og:image', content: '/icon.png' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
