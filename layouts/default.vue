@@ -1,9 +1,11 @@
 <template>
     <div class="site-wrapper">
-        <header>
-            <h1>Marketing Vomit</h1>
-            <p>Your daily batch of nauseating bullshit</p>
-        </header>
+        <a href="/" class="header-link">
+            <header>
+                <h1>Marketing Vomit</h1>
+                <p>Your daily batch of nauseating bullshit</p>
+            </header>
+        </a>
         <main>
             <nuxt />
         </main>
