@@ -7,6 +7,13 @@
         <main>
             <nuxt />
         </main>
+        <footer>
+            <strong>
+                This site is an hommage to horrible marketing jargon. 
+            </strong>
+            <p>Disclaimer: this is the dumbest side-project <a href="https://twitter.com/LucP" target="_blank">@LucP</a> has ever created.</p>
+            <small>(also my sincerest appologies to the italian community for hijacking their top-level domain)</small>
+        </footer>
     </div>
 </template>
 
@@ -17,6 +24,13 @@
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
         background: papayawhip;
+    }
+
+    .site-wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        height: 100%;
+        min-height: 100vh;
     }
 
     header{
@@ -38,6 +52,14 @@
     header p{
         font-size: 1rem;
         padding-bottom: 5px;
+    }
+
+    footer{
+        margin-top: auto;
+        background: white;
+        border-top: 2px solid rgba(0,0,0,.2);
+        padding: 30px;
+        text-align: center;
     }
 
     *,

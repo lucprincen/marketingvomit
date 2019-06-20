@@ -1,6 +1,6 @@
 <template>
     <article class="current-post">
-        <h2 v-html="title"></h2>
+        <div class="title"><i>&ldquo;</i><h2 v-html="title"></h2><i>&rdquo;</i></div>
         <span class="emoji">🤢</span>
     </article>
 </template>
@@ -20,13 +20,22 @@
     .current-post{
         text-align: center;
         max-width: 80%;
-        margin: 25vh auto;
+        margin: auto;
     }
 
     .current-post h2{
         font-weight: 400;
         font-size: 4.5rem;
+    }
 
+    .current-post .title{
+        display: block;
+        text-align: center;
+    }
+
+    .current-post .title i,
+    .current-post .title h2{
+        display: inline-block;
     }
 
     .current-post .emoji{

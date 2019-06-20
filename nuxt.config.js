@@ -5,11 +5,11 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Marketing Vomit',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+        { hid: 'description', name: 'description', content: 'Your daily dose of nauseating bullshit' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -34,7 +34,10 @@ export default {
   */
   modules: [
     '@nuxtjs/pwa',
+    '@bazzite/nuxt-netlify',
   ],
+
+  netlify: { },
   /*
   ** Build configuration
   */
