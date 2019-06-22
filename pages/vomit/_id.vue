@@ -23,6 +23,8 @@
             }
         },
         async fetch ({ store, params }) {
+
+            console.log( store.state.posts.length );
             if( store.state.posts.length == 0 ){
                 let { data } = await axios.get( 'https://staging.lucp.nl/marketingvomit/wp-json/wp/v2/posts?per_page=100&order=asc' );
                 store.commit( 'savePosts', data );
