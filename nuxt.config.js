@@ -44,7 +44,7 @@ export default {
     netlify: {
         headers: {
             '/*': [
-                'Cache-Control: public, max-age=43200'
+                'Cache-Control: public, max-age=0'
             ]
         }
   },
